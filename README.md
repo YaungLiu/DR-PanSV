@@ -29,4 +29,14 @@ Clone this repository:
 ```bash
 git clone https://github.com/YaungLiu/DR-PanSV.git
 cd DR-PanSV
+```
 
+---
+
+## ⚙️  Example Usage
+
+### ▶️  Run pangenome-based variant calling
+```bash
+cwltool --singularity --tmpdir-prefix tmp pangenome_dv_vg_manta_wf/main-vg.cwl config/KSA_SRR29147641.json
+```
+---
