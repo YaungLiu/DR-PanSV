@@ -39,4 +39,47 @@ cd DR-PanSV
 ```bash
 cwltool --singularity --tmpdir-prefix tmp pangenome_dv_vg_manta_wf/main-vg.cwl config/KSA_SRR29147641.json
 ```
+
+### ▶️  Run linear-reference variant calling
+```bash
+cwltool --singularity --tmpdir-prefix tmp linear_dv_manta_wf/main.cwl config/hg38_SRR29147641.json
+```
 ---
+
+### 🧠 Customize Input Configuration
+
+Modify the JSON files in the `config/` directory to specify:
+
+- Input **FASTQ** or **BAM** read files  
+- Reference genome paths (linear or pangenome graph)  
+- Output directories and parameters
+
+---
+
+### 📁 Output Overview
+
+Running **DR-PanSV** produces:
+
+- **Graph-based alignments (BAM)** from pangenome mapping  
+- **Linear alignments (BAM)** from GRCh38 mapping  
+- **SNV/INDEL calls** from *DeepVariant*  
+- **Structural variant (SV) calls** from *Manta* and *vg-call*  
+- Optional **QC and summary statistics** (from *samtools* and *KMC* modules)
+
+---
+
+### 🧠 Citation
+
+If you use **DR-PanSV** in your research, please cite:
+
+> Liu Y., Li H.  
+> *Dual-Reference Pangenome Structural-Variant Analysis Pipeline (DR-PanSV)*, 2025.  
+> [https://github.com/YaungLiu/DR-PanSV](https://github.com/YaungLiu/DR-PanSV)
+
+---
+
+### 📄 License
+
+This repository is distributed under the **MIT License**.
+See the [LICENSE](LICENSE) file for details.
+
