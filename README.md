@@ -72,7 +72,7 @@ Running **DR-PanSV** produces:
 
 If you use **DR-PanSV** in your research, please cite:
 
-> Liu Y., Li H.  
+> Liu Y., ...  
 > *Dual-Reference Pangenome Structural-Variant Analysis Pipeline (DR-PanSV)*, 2025.  
 > [https://github.com/YaungLiu/DR-PanSV](https://github.com/YaungLiu/DR-PanSV)
 
