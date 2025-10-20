@@ -50,7 +50,7 @@ cwltool --singularity --tmpdir-prefix tmp linear_dv_manta_wf/main.cwl config/hg3
 
 Modify the JSON files in the `config/` directory to specify:
 
-- Input **FASTQ** or **BAM** read files  
+- Input **FASTQ** read files  
 - Reference genome paths (linear or pangenome graph)  
 - Output directories and parameters
 
@@ -60,11 +60,11 @@ Modify the JSON files in the `config/` directory to specify:
 
 Running **DR-PanSV** produces:
 
-- **Graph-based alignments (BAM)** from pangenome mapping  
-- **Linear alignments (BAM)** from GRCh38 mapping  
+- **Graph-based alignments (CRAM)** from pangenome mapping  
+- **Linear alignments (CRAM)** from GRCh38 mapping  
 - **SNV/INDEL calls** from *DeepVariant*  
 - **Structural variant (SV) calls** from *Manta* and *vg-call*  
-- Optional **QC and summary statistics** (from *samtools* and *KMC* modules)
+- Optional **QC and summary statistics** (from *samtools* modules)
 
 ---
 
