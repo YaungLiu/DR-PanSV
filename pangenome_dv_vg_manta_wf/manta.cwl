@@ -17,6 +17,7 @@ arguments:
   - |
       set -e
       echo ">>> Running Manta 1.6.0 ..."
+      mkdir -p manta
       configManta.py --referenceFasta $(inputs.ref.path) --bam $(inputs.aligned_reads.path) --runDir manta_run_pan
       manta_run_pan/runWorkflow.py -m local -j $(runtime.cores)
       ls -lh manta_run_pan/results/variants/

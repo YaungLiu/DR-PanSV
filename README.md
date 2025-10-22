@@ -33,6 +33,13 @@ cd DR-PanSV
 
 ---
 
+## 📦 Download Resources
+
+For the KSA Pangenome Graph, please visit the following repository for download instructions and files:
+https://github.com/bio-ontology-research-group/pangenome?tab=readme-ov-file
+
+---
+
 ## ⚙️  Example Usage
 
 ### ▶️  Run pangenome-based variant calling
