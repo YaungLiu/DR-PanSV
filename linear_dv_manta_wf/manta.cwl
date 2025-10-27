@@ -36,5 +36,5 @@ outputs:
   sv_vcf:
     type: File
     outputBinding:
-      glob: manta_run_linear/results/variants/linear_diploidSV.vcf.gz
+      glob: manta_run_linear/results/variants/diploidSV.vcf.gz
 

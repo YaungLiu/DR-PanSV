@@ -17,11 +17,10 @@ arguments:
   - |
       set -e
       echo ">>> Running Manta 1.6.0 ..."
-      mkdir -p manta
+      mkdir -p manta_run_pan
       configManta.py --referenceFasta $(inputs.ref.path) --bam $(inputs.aligned_reads.path) --runDir manta_run_pan
       manta_run_pan/runWorkflow.py -m local -j $(runtime.cores)
       ls -lh manta_run_pan/results/variants/
-      mv manta_run_pan/results/variants/diploidSV.vcf.gz $(inputs.aligned_reads.nameroot).vcf.gz
 
 inputs:
   ref:
@@ -37,5 +36,5 @@ outputs:
   sv_vcf:
     type: File
     outputBinding:
-      glob: $(inputs.aligned_reads.nameroot).vcf.gz
+      glob: manta_run_pan/results/variants/diploidSV.vcf.gz 
 

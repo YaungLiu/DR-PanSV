@@ -15,6 +15,7 @@ arguments:
   - -S
   - $(inputs.ref_prefix)
   - -z
+stdout: $(inputs.output_vgvcf)
 
 inputs:
   graph:
@@ -32,13 +33,13 @@ inputs:
   ref_prefix:
     type: string
     default: GRCh38
-  output:
+  output_vgvcf:
     type: string
-    default: $(inputs.pack.nameroot).vcf
 
 outputs:
   vcf:
-    type: stdout
+    type: File
+    outputBinding:
+      glob: $(inputs.output_vgvcf)
 
-stdout: $(inputs.output)
 

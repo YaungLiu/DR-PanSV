@@ -26,6 +26,7 @@ inputs:
   output_cram: string?
   output_vcf: string?
   output_gvcf: string?
+  output_vgvcf: string?
   dv_extra_args:
     type: string
     default: min_mapping_quality=1,keep_legacy_allele_counter_behavior=true,normalize_reads=true
@@ -140,6 +141,7 @@ steps:
       snarls: snarls
       pack: [vg-pack/pack]
       hapl: hapl
+      output_vgvcf: output_vgvcf
     out: [vcf]
     run: vg-callgenotypes.cwl
 
